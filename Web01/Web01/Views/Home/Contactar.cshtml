@@ -1,0 +1,28 @@
+﻿@Model Web01.Models.ClassEmail
+
+@{
+    ViewData["Title"] = "Information to contact me";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Here you can find the way to contact me by all possible means</p>
+
+<h1>Contact Form</h1>
+
+<body>
+<form asp-controller="Home" asp-action="metodoEmail" method="post" >
+<div class="mb-3">
+<label for="asunto" class="form-label">Put the subject</label>
+<input type="text" class="form-control" id="asunto" name="asunto" placeholder="Business" />
+</div>
+<div class="mb-3">
+<label for="email" class="form-label">Put your Email</label>
+<input type="email" class="form-control" id="email" name="email" placeholder="nombre@monlau.com"/>
+</div>
+<div class="mb-3">
+<label for="mensaje" class="form-label">Put the message</label>
+<textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Send</button>
+</form>
+</body>
